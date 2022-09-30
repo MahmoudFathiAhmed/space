@@ -9,4 +9,5 @@ class AppStrings {
   static const String articlesRoute = '/articlesScreen';
   static const String articleRoute = '/articleScreen';
   static const String newsRoute = '/newsScreen';
+  static const String solarPredictionRoute = '/solarPredictionScreen';
 }

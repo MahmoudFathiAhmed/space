@@ -7,6 +7,7 @@ import 'package:space_project/presentation/components/video_player/MyVideoPlayer
 import 'package:space_project/presentation/screens/media/test_screen.dart';
 import 'package:space_project/presentation/screens/news_screen.dart';
 import 'package:space_project/presentation/screens/search_screen.dart';
+import 'package:space_project/presentation/screens/solar_prediction_screen.dart';
 import 'package:space_project/presentation/screens/splash_screen.dart';
 
 class Routes {
@@ -16,6 +17,7 @@ class Routes {
   static const String articleRoute = AppStrings.articleRoute;
   static const String newsRoute = AppStrings.newsRoute;
   static const String searchRoute = AppStrings.searchRoute;
+  static const String solarPredictionRoute = AppStrings.solarPredictionRoute;
 }
 
 class AppRoutes {
@@ -24,9 +26,10 @@ class AppRoutes {
       case Routes.initialRoute:
         // return MaterialPageRoute(builder: (context)=>const ArticlesScreen());
         // return MaterialPageRoute(builder: (context) => const MainScreen());
-        return MaterialPageRoute(builder: (context)=>const SplashScreen());
+        // return MaterialPageRoute(builder: (context)=>const SolarPredictionScreen());
         // return MaterialPageRoute(builder: (context)=> TextToSpeechScreen(text: 'mahmoud'));
         // return MaterialPageRoute(builder: (context) => NewsScreen());
+        return MaterialPageRoute(builder: (context) => const SplashScreen());
         // return MaterialPageRoute(builder: (context) => SearchScreen());
       // return MaterialPageRoute(builder: (context) => const TestScreen());
 
@@ -36,6 +39,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (context)=>const ArticlesScreen());
       case Routes.searchRoute:
         return MaterialPageRoute(builder: (context)=> SearchScreen());
+      case Routes.solarPredictionRoute:
+        return MaterialPageRoute(builder: (context)=> const SolarPredictionScreen());
       // case Routes.articleRoute:
       //   return MaterialPageRoute(builder: (context)=>const ArticleScreen());
       default:

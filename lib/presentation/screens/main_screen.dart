@@ -49,7 +49,7 @@ class MainScreen extends StatelessWidget {
                           ? Shimmer.fromColors(
                               highlightColor: AppColors.offWhite2,
                               baseColor: AppColors.offWhite,
-                              period: Duration(milliseconds: 3000),
+                              period: const Duration(milliseconds: 3000),
                               child: ImageTextCard(
                                 imageUrl: state.apod[index].mediaType == "image"
                                     ? state.apod[index].hdUrl
@@ -102,7 +102,9 @@ class MainScreen extends StatelessWidget {
                     width: 25,
                   ),
                   CategoryIcon(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pushNamed(Routes.solarPredictionRoute);
+                    },
                     svgIcon: ImageAssets.rocketIc,
                   ),
                 ],
