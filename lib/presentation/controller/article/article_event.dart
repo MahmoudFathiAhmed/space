@@ -1,16 +1,15 @@
 part of 'article_bloc.dart';
 
-abstract class ArticlesEvent extends Equatable {
-  const ArticlesEvent();
+abstract class ArticleEvent extends Equatable {
+  const ArticleEvent();
 
   @override
   List<Object> get props => [];
 }
-
-class GetArticleEvent extends ArticlesEvent {
-
-  const GetArticleEvent();
+class GetArticleEvent extends ArticleEvent {
+final int id;
+  const GetArticleEvent(this.id);
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [id];
 }

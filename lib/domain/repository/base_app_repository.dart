@@ -9,5 +9,5 @@ import 'package:space_project/domain/usecase/get_article_usecase.dart';
 abstract class BaseAppRepository{
   Future <Either<Failure, List<Apod>>> getApod(ApodParameters parameters);
   Future <Either<Failure, List<Article>>> getArticles(NoParameters parameters);
-  Future <Either<Failure, Article>> getArticle(ArticleParameters parameters);
+  Future <Either<Failure, List<Article>>> getArticle(ArticleParameters parameters);
 }

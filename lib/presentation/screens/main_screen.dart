@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:space_project/core/routes/app_routes.dart';
 import 'package:space_project/core/services/service_locator.dart';
 import 'package:space_project/core/utils/app_assets.dart';
 import 'package:space_project/core/utils/app_colors.dart';
@@ -12,7 +13,7 @@ import 'package:space_project/presentation/components/category_icon.dart';
 import 'package:space_project/presentation/components/header_widget.dart';
 import 'package:space_project/presentation/components/image_text_card.dart';
 import 'package:space_project/presentation/controller/apod/apod_bloc.dart';
-import 'package:space_project/presentation/screens/article.dart';
+import 'package:space_project/presentation/screens/article_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -84,8 +85,7 @@ class MainScreen extends StatelessWidget {
                 children: [
                   CategoryIcon(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const ArticleScreen()));
+                      Navigator.of(context).pushNamed(Routes.articlesRoute);
                     },
                     svgIcon: ImageAssets.planetIc,
                   ),
@@ -93,7 +93,9 @@ class MainScreen extends StatelessWidget {
                     width: 25,
                   ),
                   CategoryIcon(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pushNamed(Routes.searchRoute);
+                    },
                     svgIcon: ImageAssets.searchIc,
                   ),
                   const SizedBox(

@@ -35,7 +35,7 @@ class AppRepository extends BaseAppRepository{
   }
 
   @override
-  Future<Either<Failure, Article>> getArticle(ArticleParameters parameters) async{
+  Future<Either<Failure, List<Article>>> getArticle(ArticleParameters parameters) async{
     final result = await baseAppRemoteDataSource.getArticle(parameters);
     try {
       return Right(result);

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 import 'package:space_project/core/utils/app_colors.dart';
+import 'package:space_project/presentation/components/speak_text_widget.dart';
 
 class ArticleWidget extends StatelessWidget {
   final String title;
@@ -56,6 +57,10 @@ class ArticleWidget extends StatelessWidget {
             width: double.infinity,
             child: Image.network(imageUrl),
           ),
+          const SizedBox(
+            height: 20,
+          ),
+          SpeakTextWidget(text: summary),
           const SizedBox(
             height: 20,
           ),
